@@ -1,0 +1,27 @@
+#hi {
+    color: #4a4a4a;
+    text-align: center;
+    padding-top: 2%;
+    font-family: Brandon Grotesque;
+    font-size: 8em;
+}
+
+#hk {
+    color: #DE2910;
+}
+
+#pictures{
+    padding-left: 20%;
+}
+#navbar{
+    color: #4a4a4a;
+    text-align: center;
+    font-family: Brandon Grotesque;
+    font-size: 2em;
+    
+}
+
+li
+{
+    style="list-style: none;
+}
