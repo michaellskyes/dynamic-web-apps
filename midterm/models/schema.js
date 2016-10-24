@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var picSchema = new Schema({
-	imageNames: [String],
-	dateCreated: {type: Date, default: Date.now},
+var comments = new Schema({
+	name: [String],
+    comment: [String],
+	dateCreated: {type: Date, default: Date.now}
 
 });
