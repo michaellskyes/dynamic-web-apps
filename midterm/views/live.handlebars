@@ -1,6 +1,37 @@
-{{!-- upload image --}}
 
-<div>
+<script type="text/javascript">
+    var userInput;
+    var fontInput;
+    var sentence;
+    var potato;
+    var pa;
+    var pt;
+    var text; 
+    var createPotato = document.createTextNode(name);
+    function getSentence() {
+        userInput = document.getElementById('sentenceInput');
+        fontInput = document.getElementById('sizeInput');
+        sentence = document.getElementById('output');
+        sentence.innerHTML = "";
+        potato = document.getElementById('potato');
+        potato.innerHTML = "";
+        pt = document.createElement("P");
+        pa = document.createElement("P");
+        text = document.createTextNode(userInput.value);
+        
+     	pt.appendChild(createPotato);
+     	pa.appendChild(text);
+     	potato.appendChild(pt);
+        sentence.appendChild(pa);
+
+    document.addEventListener("DOMContentLoaded", function(){
+
+		var sentenceBtn = document.getElementById("getSentence");
+	});
+    }
+    </script>
+
+<div>    
 <div id="pictures"><img src ="/public/uploads/bork.jpg"></div>
 
 <div id="comments">
@@ -8,13 +39,21 @@
     
 <form action="public/index.php" method="post" >
     
-	<input id="q" type="TEXT" name="name" accepts="text" placeholder="Name" >
-    
-	<input id="comment" type="box" name="comment" accepts="text" placeholder="Comment" >
-    
-	<input type="submit" id="submit_post" value = "POST">
+	    <input type="text" id="sentenceInput" name="name" placeholder="name" >
+<br>
+        <input type="text" id="comment" name="comment" placeholder="write something!">
 </form>  
+    <br>
+            <button id="getSentence" onclick="getSentence();">Submit</button>
+<p>Comments</p>
+<div id="potato">
+<p>
+Tell me something funny
+</p>
+</div>
+<div id="output">
 </div>
     
+</div>
 </div>
 

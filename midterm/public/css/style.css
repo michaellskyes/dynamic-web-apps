@@ -42,13 +42,13 @@ li
     
 }
 
-input[type=text] {
+#sentenceInput {
     border: none;
     border-bottom: 2px solid #DE2910;
     float: left;
 }
 
-input[type=box] {
+#comment {
     border: none;
     border-bottom: 2px solid #DE2910;
     width: 100%;
@@ -56,7 +56,7 @@ input[type=box] {
 }
 
 
-input[type=button], input[type=submit], input[type=reset] {
+#getSentence {
     background-color: #4a4a4a;
     border: none;
     color: white;
@@ -71,7 +71,26 @@ input[type=button], input[type=submit], input[type=reset] {
     
 }
 
+#output{
+    color: #4a4a4a;
+    text-align: center;
+    font-family: Brandon Grotesque;
+    font-size: 1em;
+    
+    
+}
+
+#p {
+    color: #4a4a4a;
+    text-align: center;
+    font-family: Brandon Grotesque;
+    font-size: 2em;
+    
+    
+}
+}
+/*
 input[type="submit"]:hover {
     
     color: #DE2910;
-}
+}*/

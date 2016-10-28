@@ -8,20 +8,23 @@ var fs = require('fs');
 var app = express();
 var path = require('path');
 
-//require('dotenv').config();
-//
+require('dotenv').config();
+
 //Mongoose.connect(process.env.DB_URL);
 
-//var node_dropbox = require('node-dropbox');
-//api = node_dropbox.api('knHVpSSQbDQAAAAAAAAPrxdmY3Q-W5z_zozgUEnwejvTthxt6rvnbddQeOBeTreg');
-//api.account(function(err, res, body) {
-//	console.log(body);
-//});     
-//api.getFile('shiba.jpg', blah)
+var node_dropbox = require('node-dropbox');
+api = node_dropbox.api('knHVpSSQbDQAAAAAAAAPrxdmY3Q-W5z_zozgUEnwejvTthxt6rvnbddQeOBeTreg');
+api.account(function(err, res, body) {
+	console.log(body);
+});      
+api.getFile('shiba.jpg', function(data){
+    console.log(data);
+})
 
 var dbx = new dropbox({ accessToken: 'knHVpSSQbDQAAAAAAAAPrxdmY3Q-W5z_zozgUEnwejvTthxt6rvnbddQeOBeTreg' });
 
 var result = dbx.sharingGetSharedLinkFile('shiba.jpg').then(function(data){
+    console.log(data);
     return data.fileBlob;
 }) 
 console.log(result);
