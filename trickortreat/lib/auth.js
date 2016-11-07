@@ -25,9 +25,6 @@ module.exports = function(app, options){
             app.use(passport.session());
             
             app.use(function(req, res, next){
-                //add user to res.locals
-                //passport adds req.user
-                //we can use res.locals.user in our views
                 res.locals.user = req.user;
                 next();
             })
@@ -75,7 +72,7 @@ module.exports = function(app, options){
                 req.session.flash = {
                     type: 'positive',
                     header: 'Signed in',
-                    body: 'WOW U logged in good job'
+                    body: 'You have logged in'
                 };
                 res.redirect('/')
             });
@@ -85,7 +82,7 @@ module.exports = function(app, options){
                 req.session.flash = {
                     type: 'positive',
                     header: 'Signed out',
-                    body: 'Successfully signed out'
+                    body: 'You have signed out'
                 };
                 res.redirect('/');
             });
